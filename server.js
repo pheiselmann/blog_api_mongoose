@@ -28,10 +28,7 @@ app.get('/blogposts', (req, res) => {
     // call the `.apiRepr` instance method we've created in
     // models.js in order to only expose the data we want the API return.
     .then(blogposts => {
-      res.json({
-        blogposts: blogposts.map(
-          (blogpost) => blogpost.apiRepr())
-      });
+      res.json(blogposts.map(blogpost => blogpost.apiRepr()));
     })
     .catch(
       err => {
