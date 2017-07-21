@@ -71,7 +71,7 @@ app.post('/blogposts', (req, res) => {
     .create({
       title: req.body.title,
       content: req.body.content,
-      author: req.body.author
+      author: req.body.author})
       //created: publishDate || Date()})
     .then(
       blogpost => res.status(201).json(blogpost.apiRepr()))
