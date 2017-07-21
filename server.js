@@ -21,7 +21,7 @@ app.get('/blogposts', (req, res) => {
     .find()
     // we're limiting because blogposts db may eventually 
     // have too many documents to process/return
-    .limit(10)
+    //.limit(10)
     // `exec` returns a promise
     .exec()
     // success callback: for each blog post we got back, we'll
