@@ -19,8 +19,8 @@ blogPostSchema.virtual('authorString').get(function() {
   return `${this.author.firstName} ${this.author.lastName}`.trim()});
 
 
-blogPostSchema.virtual('publishDate').get(function() {
-  return Date()});
+// blogPostSchema.virtual('publishDate').get(function() {
+//   return Date()});
 
 
 // this is an *instance method* which will be available on all instances
@@ -32,8 +32,8 @@ blogPostSchema.methods.apiRepr = function() {
     id: this._id,
     title: this.title,
     content: this.content,
-    author: this.authorString,
-    created: this.publishDate
+    author: this.authorString
+    //created: this.publishDate
   };
 }
 
